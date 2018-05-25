@@ -2,5 +2,9 @@ require 'sinatra'
 require './config'
 
 get '/' do
-    "Hello world"
+    erb :index
+end
+
+post '/tecnicas' do
+    "Bienvenido #{params['nombre']}"
 end
