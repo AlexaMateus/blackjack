@@ -14,3 +14,8 @@ end
 When(/^lo configuro$/) do
   click_button("Enviar")
 end
+
+When(/^hago click en "([^"]*)"$/) do |textoboton|
+  click_button("#{textoboton}")
+end
+

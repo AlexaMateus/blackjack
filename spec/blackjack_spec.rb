@@ -16,6 +16,27 @@ describe BlackJack do
 		#act
 		result = bj.mostrarNombre
 		#assert
-		expect(result).to eq "Su nombre no puede ser vacio"
+		expect(result).to eq "Error: Su nombre no puede ser vacio"
 	end
+
+	it "Debo ver una pregunta" do
+		#arrange
+		bj = BlackJack.new "Juan"
+		#act
+		bj.crearPregunta
+		result = bj.verPregunta
+		#assert
+		expect(result).not_to be_empty
+    end
+
+
+	it "Debo ver opciones" do
+		#arrange
+		bj = BlackJack.new "Juan"
+		#act
+		bj.crearPregunta
+		result = bj.verOpciones
+		#assert
+		expect(result).not_to be_empty
+    end    
 end

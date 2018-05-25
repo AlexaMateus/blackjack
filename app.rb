@@ -8,6 +8,15 @@ end
 
 post '/tecnicas' do
 	session['bj'] = BlackJack.new params['nombre']
-	
-    erb :tecnicas
+	if session['bj'].mostrarNombre.include? "Error"
+		session['mensaje'] = session['bj'].mostrarNombre
+		erb :paginamensaje
+	else
+    	erb :tecnicas
+    end	
+end
+
+post '/jugar' do
+	session['bj'].crearPregunta
+	erb :preguntasjuego
 end
