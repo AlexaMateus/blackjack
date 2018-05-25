@@ -17,10 +17,12 @@ post '/tecnicas' do
 end
 
 post '/jugar' do
+	session['resultado']=""
 	session['bj'].crearPregunta
 	erb :preguntasjuego
 end
 post '/validar' do
+	session['resultado']=""
 	session['resultado']= session['bj'].esCorrecta(params['opcion'])
 	erb :preguntasjuego
 end

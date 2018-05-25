@@ -47,7 +47,7 @@ class BlackJack
 		if seleccionado.to_s == @correcta.to_s
         	return 'Es correcto'
 		else
-			return 'Es false'
+			return 'Es incorrecto'
 		end
 
 	end
