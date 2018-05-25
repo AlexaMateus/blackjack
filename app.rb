@@ -1,10 +1,12 @@
 require 'sinatra'
 require './config'
+require './lib/BlackJack'
 
 get '/' do
     erb :index
 end
 
 post '/tecnicas' do
-    "Bienvenido #{params['nombre']}"
+	bj = BlackJack.new params['nombre']
+    "Bienvenido #{bj.mostrarNombre}"
 end

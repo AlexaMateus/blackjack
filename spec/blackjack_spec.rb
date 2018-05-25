@@ -1,22 +1,13 @@
 require "./lib/BlackJack"
 
-describe BlackJac do
+describe BlackJack do
 	it "Debe guardar el nombre del jugador" do
 		#arrange
-		pyf = PicasYFijas.new "54869"
+		bj = BlackJack.new "Juan"
 		#act
-		result = pyf.validarSecreto
+		result = bj.mostrarNombre
 		#assert
-		expect(result).to eq "El numero no es valido"
-	end
-
-	it "el numero secreto debe tener 4 digitos valido" do
-		#arrange
-		pyf = PicasYFijas.new "5486"
-		#act
-		result = pyf.validarSecreto
-		#assert
-		expect(result).to eq "El numero fue registrado correctamente"
+		expect(result).to eq "Juan"
 	end
 
 
