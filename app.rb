@@ -21,6 +21,6 @@ post '/jugar' do
 	erb :preguntasjuego
 end
 post '/validar' do
-	session['bj'].validar
+	session['resultado']= session['bj'].esCorrecta(params['opcion'])
 	erb :preguntasjuego
 end

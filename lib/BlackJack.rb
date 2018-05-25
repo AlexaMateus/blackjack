@@ -15,9 +15,9 @@ class BlackJack
 
 		          ]
 		@correctas = [1,0,3]
-		@pregunta = ""
-		@opcion = ""
-		@correcta = 0
+#		@pregunta = 0
+#		@opcion = 1
+#		@correcta = 1
 
 	end
 
@@ -44,19 +44,12 @@ class BlackJack
 	end 
 
 	def esCorrecta(seleccionado)
-		if seleccionado == @correcta
-        	return true
+		if seleccionado.to_s == @correcta.to_s
+        	return 'Es correcto'
 		else
-			return false
+			return 'Es false'
 		end
 
 	end
 
-	def validar
-		if esCorrecta(@opcion)
-			@respuesta = 'Es correcto'
-		else
-			@respuesta = 'Respuesta incorrecta'
-		end
-	end
 end

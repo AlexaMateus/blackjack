@@ -11,7 +11,7 @@
 <% 
 contador = 0
 session['bj'].verOpciones.each do |opcion| %>
- <input type="radio" value="<%= contador %>" ><%= opcion %> <br>
+ <input type="radio" value="<%= contador %>" name = "opcion"><%= opcion %> <br>
 
 <% 
 contador = contador +1 
@@ -19,7 +19,7 @@ end	%>
 <input type="submit" value="Enviar">
 </form>
 <form>
-	Respuesta: <%= session['bj'].validar %>
+	<h1>Respuesta: <%=session['resultado']%></h1>
 </form>
 </body>
 </html>
