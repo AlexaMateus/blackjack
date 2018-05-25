@@ -7,6 +7,7 @@ get '/' do
 end
 
 post '/tecnicas' do
-	bj = BlackJack.new params['nombre']
-    "Bienvenido #{bj.mostrarNombre}"
+	session['bj'] = BlackJack.new params['nombre']
+	
+    erb :tecnicas
 end
