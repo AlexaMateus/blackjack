@@ -20,3 +20,7 @@ post '/jugar' do
 	session['bj'].crearPregunta
 	erb :preguntasjuego
 end
+post '/validar' do
+	session['bj'].validar
+	erb :preguntasjuego
+end

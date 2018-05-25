@@ -7,6 +7,19 @@
 <h2>Pregunta</h2>
  <%= session['bj'].verPregunta %>
 <h2>Opciones</h2>
- <%= session['bj'].verOpciones %>
+<form action="/validar" method="POST">
+<% 
+contador = 0
+session['bj'].verOpciones.each do |opcion| %>
+ <input type="radio" value="<%= contador %>" ><%= opcion %> <br>
+
+<% 
+contador = contador +1 
+end	%>
+<input type="submit" value="Enviar">
+</form>
+<form>
+	Respuesta: <%= session['bj'].validar %>
+</form>
 </body>
 </html>
