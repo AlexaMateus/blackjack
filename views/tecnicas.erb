@@ -5,20 +5,61 @@
 </head>
 <body>
 <h1>Bienvenido <%= session['bj'].mostrarNombre %></h1>
-	<h1>Tecnicas</h1>
-    Escenario 1 Cuppier con carta a la vista  superior a 10 "</h1>
+	<h1>Técnicas</h1>
+    <h1>Escenario 1 Cuppier con carta a la vista  superior a 10</h1>
     <ul>
-    <li>   TECNICA - Si tienes en suma valor mayor a 12 y menor a 16
-                 ==> Pide carta, hasta llegar minimo a 17 puntos"
-    <li>   TECNICA 2 Si tienes en suma, 9 a 11 .
-                 ==> Puedes doblar "
-    <li>   TECNICA 3 "Si tienes en suma, 2 a 8 .
-                 ==> Puedes doblar "
-    <li>   TECNICA 4 Si tienes en suma, 9 a 11 .
-                 ==> Puedes doblar 
-    <li>   TECNICA 3 "Si tienes en suma, 2 a 8 .
+    <li>   TECNICA 1: Si tienes en suma valor mayor a 12 y menor a 16
+                 ==> Pide carta, hasta llegar minimo a 17 puntos
+    <li>   TECNICA 2: Si tienes en suma, 9 a 11 
+                 ==> Puedes doblar*
+                     Objetivo Esperar un 10 para tener 21
+    <li>   TECNICA 3: Si tienes en suma, 2 a 8 
+                 ==> debes pedir cartas, hasta llegar mínimo a 17 puntos
+    </ul> 
+    <h1>Escenario 2 Cuppier con carta a la vista  superior !AZ!</h1>
+    <ul>
+    <li>   TECNICA 1: Puedes pagar Seguro*
+    <li>   TECNICA 2: Si tienes en suma valor mayor a 12 y menor a 16
+                 ==> Retirar apuesta*
+    <li>   TECNICA 3: Si tienes en suma, 2 a 8 
+                 ==> debes pedir cartas, hasta llegar mínimo a 17 puntos
     </ul>
+    <h1>Escenario 3 Cuppier con carta a la vista  entre 2 y 6</h1>
+    <ul>
+    <li>   TECNICA 1: Puedes pagar Seguro*
+    <li>   TECNICA 2: Si tienes en suma, 7 a 11 
+                 ==> Puedes doblar*
+    <li>   TECNICA 3: Si tienes en suma, 2 a 8 
+                 ==> debes pedir cartas, hasta llegar mínimo a 12 puntos
+                     Objetivo: Que el Cruppier se pase de 21
+    </ul>
+    <h1>Glosario</h1>
+    <li>   DOBLAR: Colocar el mismo valor de la apuesta inicial detras de la apuesta
+                   inicial, indicando al Cruppier el deseo de Doblar. 
+                   En este caso el Cruppier entregará solo una carta adicional.
+    <li>   SEGURO: El seguro es un valor que se coloca de apuesta en la casilla de 
+                   seguros, para ganar el valor colocado en caso de que el Cruppier,
+                   tenga BlackJack. Si el Cruppier no tiene BlackJack, el valor del 
+                   Seguro es perdido.
+    <li>   RETIRAR APUESTA: Acción que efectúa el jugador, deslizando de izquierda a
+    				derecha su dedo sobre el paño de la mesa, indicando el retiro de 
+    				esta jugada de apuesta. En este caso se PIERDE la mitad del valor
+    				apostado
+    <li>   BLACKJACK: Objetivo del juego, que consiste en tener la suma de 21 puntos en
+                    solo dos cartas, (10,J,Q,K) y (AZ)
+    <li>   21:     Tope Máximo de valor de suma por juego en las cartas
+    				entregadas por el Cruppier
+    <li>   CRUPPIER: Es el funcionario del Casino, o persona en un juego de casa que 
+                     hace las veces de repartidor de cartas, y que es contra quien se 
+                     compite en el juego.
+                     Este Cruppier, tiene la obligación de llegar siempre a minimo 17
+                     puntos en cada juego, así ya esté ganando con un puntaje inferior
+                     al oponente.				                				
+
+    </ul>
+
 <form action="/jugar" method="POST">
+	<br>
 	<input type="submit" value="Jugar">
 </form>
 

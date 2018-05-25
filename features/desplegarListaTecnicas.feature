@@ -10,7 +10,7 @@ Scenario:Debo ver las tecnicas del juego
 	When ingrese el nombre "Juan"
 	And lo configuro
 	Then debo ver "Bienvenido Juan"
-	And debo ver "Tecnicas"
+	And debo ver "Técnicas"
 
 
 Scenario:Debo ver boton Jugar
